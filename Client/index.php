@@ -35,7 +35,7 @@ function getDevices()
     $list=sendReceiveMessage('ALIST');
     $list = substr($list, 0, strlen($list) - 1);  //doing this instead of trim
 
-    $devicesList = explode("#", $list);
+    $devicesList = explode("#DEVICE", $list);
     $devices = array();
     $c=0;
     foreach ($devicesList as $device) {
