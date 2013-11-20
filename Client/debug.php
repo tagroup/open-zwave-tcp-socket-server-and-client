@@ -24,7 +24,7 @@ $data=socket_read($socket, 2048,PHP_NORMAL_READ );
 if(strlen($data) >0)
 {
     echo '<p>', $data, '</p>';
-    $devices=explode('#',$data);
+    $devices=explode('#DEVICE',$data);
     for($i=0;$i<count($devices) ;$i++)
     {
         $device=explode('~',$devices[$i]);
